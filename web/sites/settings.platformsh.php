@@ -94,8 +94,8 @@ if (!isset($settings['file_public_path'])) {
 if (!isset($settings['file_private_path'])) {
   $settings['file_private_path'] = $platformsh->appDir . '/private/' . $platformsh_subsite_id;
 }
-if (!isset($config['system.file']['path']['temporary'])) {
-  $config['system.file']['path']['temporary'] = $platformsh->appDir . '/tmp/' . $platformsh_subsite_id;
+if (!isset($config['file_temp_path'])) {
+  $config['file_temp_path'] = $platformsh->appDir . '/tmp/' . $platformsh_subsite_id;
 }
 
 // Configure the default PhpStorage and Twig template cache directories.
