@@ -9,7 +9,17 @@
     cache:
         enabled: true
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+        cookies:
+            - '/^Drupal.visitor/'
+            - '/^SS?ESS/'
+            - '/^comment_/'
+            - '/^wordpress_/'
+            - '/^wordpress_logged_in_/'
+            - '/^wordpress_sec_/'
+            - 'wordpress_test_cookie'
+            - '/^wp-settings-/'
+            - '/^wp-resetpass-/'
+            - '/^wp-postpass/'
 
 "https://second.{default}/":
     type: upstream
@@ -17,4 +27,14 @@
     cache:
         enabled: true
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+        cookies:                                                       
+            - '/^Drupal.visitor/'
+            - '/^SS?ESS/'
+            - '/^comment_/'
+            - '/^wordpress_/'
+            - '/^wordpress_logged_in_/'
+            - '/^wordpress_sec_/'
+            - 'wordpress_test_cookie'
+            - '/^wp-settings-/'
+            - '/^wp-resetpass-/'
+            - '/^wp-postpass/'
